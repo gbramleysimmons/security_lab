@@ -1,3 +1,4 @@
+
 var redirectsTour = new Tour({
     name: "redirects"
 });

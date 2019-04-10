@@ -84,7 +84,7 @@ function handleContributionsUpdate(req,res,next)
     }
 
    var q = "UPDATE Contributions SET preTax = ?, afterTax = ?, roth = ? WHERE userId = ?";
-   db.query(q,function, [preTax, afterTax, roth],  (e1,d1) => { handleContributionsUpdate1(req,res,next,e1,d1); } );
+   db.query(q,[preTax, afterTax, roth],  function(e1,d1) { handleContributionsUpdate1(req,res,next,e1,d1); } );
 }
 
 
