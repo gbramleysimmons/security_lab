@@ -8,10 +8,11 @@
 
 
 var db = require("./database.js");
-const entities = new Entities();
 
 
 const Entities = require('html-entities').XmlEntities;
+const entities = new Entities();
+
 
 /********************************************************************************/
 /*										*/
@@ -22,7 +23,6 @@ const Entities = require('html-entities').XmlEntities;
 function addMemos(req,res,next)
 {
    var memo = entities.encode(req.body.memo);
-   memo.map()
 
    var q = "INSERT INTO Memos(memo) VALUES ( ?)";
    db.query(q, [memo],function(e1,d1) { addMemos1(req,res,next,e1,d1); });
