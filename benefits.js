@@ -94,7 +94,8 @@ function updateBenefits1(req,res,next,err,data)
 /********************************************************************************/
 /*										*/
 /*	Exports 								*/
-/*										*/
+/*						   memos.resetMemos();
+				*/
 /********************************************************************************/
 
 exports.displayBenefits = displayBenefits;
