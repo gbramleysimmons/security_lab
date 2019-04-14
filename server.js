@@ -124,7 +124,7 @@ function setup()
 	 autoescape: false
     });
 
-   var server = app.listen(8080);
+   var server = app.listen(8000);
 
    console.log("Listening on " + 8080);
 }
