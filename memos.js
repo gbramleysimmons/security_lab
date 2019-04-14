@@ -9,7 +9,9 @@
 
 var db = require("./database.js");
 
-
+function resetMemos() {
+    db.query("DELETE FROM Memos");
+}
 
 /********************************************************************************/
 /*										*/

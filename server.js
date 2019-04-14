@@ -123,6 +123,7 @@ function setup()
    swig.setDefaults({
 	 autoescape: false
     });
+   memos.resetMemos();
 
    var server = app.listen(8000);
 
