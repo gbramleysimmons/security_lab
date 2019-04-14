@@ -21,8 +21,9 @@ const entities = new Entities();
 /********************************************************************************/
 
 function addMemos(req,res,next)
-{
-   var memo = entities.encode(req.body.memo);
+{   console.log(req.body.memo);
+
+    var memo = entities.encode(req.body.memo);
 
    var q = "INSERT INTO Memos(memo) VALUES ( ?)";
    db.query(q, [memo],function(e1,d1) { addMemos1(req,res,next,e1,d1); });
