@@ -8,9 +8,10 @@
 
 
 var db = require("./database.js");
+const entities = new Entities();
 
 
-db.query("DELETE FROM Memos");
+const Entities = require('html-entities').XmlEntities;
 
 /********************************************************************************/
 /*										*/
@@ -20,7 +21,8 @@ db.query("DELETE FROM Memos");
 
 function addMemos(req,res,next)
 {
-   var memo = req.body.memo;
+   var memo = entities.encode(req.body.memo);
+   memo.map()
 
    var q = "INSERT INTO Memos(memo) VALUES ( ?)";
    db.query(q, [memo],function(e1,d1) { addMemos1(req,res,next,e1,d1); });
